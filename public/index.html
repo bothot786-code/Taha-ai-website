@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taha AI — Multi-Model Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <span class="logo">⚡</span>
+        <div>
+          <h1>Taha AI</h1>
+          <small>Multi-Model Chat</small>
+        </div>
+      </div>
+      <select id="model">
+        <option value="claude">🧠 Claude</option>
+        <option value="gemini">✨ Gemini Premium</option>
+        <option value="gpt4mini">⚡ GPT-4o-mini</option>
+        <option value="qwen">🎯 Qwen3 80B</option>
+        <option value="gemmacode">💻 Gemma Code</option>
+        <option value="imageedit">🖼️ Image Edit</option>
+        <option value="imagegen">🎨 Image Generate (Flux)</option>
+      </select>
+    </header>
+
+    <main id="chat">
+      <div class="msg bot welcome">
+        <strong>🤖 Taha AI</strong><br/>
+        Salam! Model select karein aur sawal poochein.<br/>
+        <small>🖼️ Image Edit: image upload + prompt • 🎨 Flux: sirf prompt (nayi image)</small>
+      </div>
+    </main>
+
+    <div id="previewBar" class="preview-bar hidden">
+      <img id="previewImg" />
+      <button id="removeImg" title="Remove">✕</button>
+    </div>
+
+    <footer>
+      <label class="upload" title="Image upload">
+        📎<input type="file" id="imageInput" accept="image/*" hidden />
+      </label>
+      <input id="message" type="text" placeholder="Apna sawal likhein..." autocomplete="off" />
+      <button id="send">Send</button>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
